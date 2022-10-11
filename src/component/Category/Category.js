@@ -1,10 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Category.css'
 
 const Category = (props) => {
-    const {handelCard} = props;
     const {id,name,logo, total} = props.data;
+    const navigate = useNavigate();
+    const quizApi = () =>{
+        navigate(`/quiz/${id}`);
+    }
     // console.log(name)
     return (
             
@@ -16,9 +19,7 @@ const Category = (props) => {
                     <p className="card-text"> <b> Total quiz: {total}</b> </p>
                 </div>
                 <div class="d-grid gap-2">
-                    <Link to={`/quiz/${id}`}>
-                        <button className="quiz-btn btn btn-primary" type="button">Start Quiz</button>
-                    </Link>
+                    <button onClick={quizApi} className="quiz-btn btn btn-primary" type="button">Start Quiz</button>
                 </div>
             </div>
         </div>

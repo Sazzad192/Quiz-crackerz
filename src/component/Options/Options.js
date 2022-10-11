@@ -5,8 +5,8 @@ const Options = (props) => {
     return (
         <div className='option'>
             <div className="form-check m-5">
-                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
-                <label className="form-check-label"  htmlFor="flexRadioDefault1">
+                <input className="form-check-input" type="radio" name="flexRadioDefault" id={props.options}/>
+                <label className="form-check-label"  htmlFor={props.options}>
                     {props.options}
                 </label>
             </div>

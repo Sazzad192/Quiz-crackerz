@@ -7,12 +7,6 @@ import './Home.css'
 const Home = () => {
     const quizData = useLoaderData().data;
     
-    // const naviage = useNavigate();
-
-    const handelCard = quizData => {
-        console.log(quizData)
-    }
-    
     return (
         <div>
             <div className="carousel slide" data-ride="carousel">
@@ -30,7 +24,7 @@ const Home = () => {
                         quizData.map(element => <Category
                         key={element.id}
                         data = {element}
-                        handelCard={handelCard}></Category>)
+                        ></Category>)
                     }
                 </div>
             </div>
