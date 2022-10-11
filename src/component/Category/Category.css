@@ -1,0 +1,14 @@
+.card img{
+    height: 250px;
+    width: 100%;
+    background-color: black;
+}
+
+.quiz-btn{
+    border-radius: 0 0 5px 5px;
+}
+
+.card-body{
+    display: flex;
+    justify-content: space-around;
+}

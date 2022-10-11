@@ -1,9 +1,16 @@
 import React from 'react';
-import backgroud from '../../img/banner.jpg'
+import { useLoaderData } from 'react-router-dom';
+import Category from '../Category/Category';
 import './Home.css'
 
 
 const Home = () => {
+    const quizData = useLoaderData().data;
+    
+    const handelCard = quizData => {
+        console.log(quizData)
+    }
+    
     return (
         <div>
             <div className="carousel slide" data-ride="carousel">
@@ -15,9 +22,15 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
-            <div>
-                
+            <div className='container my-5'>
+                <div className="row row-cols-1 row-cols-md-2 g-4">
+                    {
+                        quizData.map(element => <Category
+                        key={element.id}
+                        data = {element}
+                        handelCard={handelCard}></Category>)
+                    }
+                </div>
             </div>
         </div>
     );
