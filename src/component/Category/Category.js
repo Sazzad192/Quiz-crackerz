@@ -4,13 +4,13 @@ import './Category.css'
 
 const Category = (props) => {
     const {id,name,logo, total} = props.data;
+
     const navigate = useNavigate();
     const quizApi = () =>{
         navigate(`/quiz/${id}`);
     }
-    // console.log(name)
-    return (
-            
+    
+    return (  
         <div className="col">
             <div className="card">
                 <img src={logo} className="card-img-top" alt="..."/>

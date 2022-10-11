@@ -19,21 +19,13 @@ const Header = () => {
                         <li className="nav-item">
                             <Link to={'/stat'}>Statistic</Link>
                         </li>
-                        
+                        <li>
+                            <Link to={'/blog'}>Blog</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        // <div className='d-flex justify-content-around align-items-center'>
-        //     
-
-        //     <div>
-        //         
-
-        //         
-        //     </div>
-            
-        // </div>
     );
 };
 

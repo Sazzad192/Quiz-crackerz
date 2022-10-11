@@ -1,5 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import Blog from './component/Blog/Blog';
+import Error from './component/Error/Error';
 import Home from './component/Home/Home';
 import Quiz from './component/Quiz/Quiz';
 import Statistic from './component/Statistic/Statistic';
@@ -30,10 +32,11 @@ function App() {
           },
           element: <Quiz></Quiz>
         },
-        {path:'/stat', element: <Statistic></Statistic>}
+        {path:'/stat', element: <Statistic></Statistic>},
+        {path:'/blog', element: <Blog></Blog>}
       ]
     },
-    {path:'*', element: <p>error route. Not found: 404 -_-</p> }
+    {path:'*', element: <Error></Error> }
   ])
   return (
     <div className="App">
