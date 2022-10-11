@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import Category from '../Category/Category';
 import './Home.css'
 
@@ -7,6 +7,8 @@ import './Home.css'
 const Home = () => {
     const quizData = useLoaderData().data;
     
+    // const naviage = useNavigate();
+
     const handelCard = quizData => {
         console.log(quizData)
     }
@@ -18,7 +20,7 @@ const Home = () => {
                     <div className="carousel-item d-flex flex-column h-100 align-items-center justify-content-center text-white  active">
                         <h1 className='py-5'>Select Your Favourite Quiz Topic</h1>
 
-                        <h6 className=''>Topics: HTML, CSS, JavaScript, React, Node JS, Problem Solving</h6>
+                        <h6>Topics: HTML, CSS, JavaScript, React, Node JS, Problem Solving</h6>
                     </div>
                 </div>
             </div>

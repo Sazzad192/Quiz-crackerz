@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Category.css'
 
 const Category = (props) => {
-    const {handelCard} = props
-    const {name,logo, total} = props.data;
+    const {handelCard} = props;
+    const {id,name,logo, total} = props.data;
     // console.log(name)
     return (
             
@@ -15,7 +16,9 @@ const Category = (props) => {
                     <p className="card-text"> <b> Total quiz: {total}</b> </p>
                 </div>
                 <div class="d-grid gap-2">
-                    <button onClick={() => handelCard(props.data)} className="quiz-btn btn btn-primary" type="button">Start Quiz</button>
+                    <Link to={`/quiz/${id}`}>
+                        <button className="quiz-btn btn btn-primary" type="button">Start Quiz</button>
+                    </Link>
                 </div>
             </div>
         </div>
