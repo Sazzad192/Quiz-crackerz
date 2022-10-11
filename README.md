@@ -1,3 +1,10 @@
+## Project Description
+
+/_
+In this project you can submit your quiz on 4 types of topic.
+This project is based on React.JS and API for data. I create nested and dynamic route for this site. Also loaded data for different kinds of components and use those inside that components. I make a chart to show total quizs for each topic. I also added 3 questions inside blog page.
+_/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

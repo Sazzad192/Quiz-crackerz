@@ -18,7 +18,7 @@ const Category = (props) => {
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text"> <b> Total quiz: {total}</b> </p>
                 </div>
-                <div class="d-grid gap-2">
+                <div className="d-grid gap-2">
                     <button onClick={quizApi} className="quiz-btn btn btn-primary" type="button">Start Quiz</button>
                 </div>
             </div>
