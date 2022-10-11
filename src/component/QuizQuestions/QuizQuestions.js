@@ -27,7 +27,8 @@ const QuizQuestions = (props) => {
                     <h5 className="card-title"> <b>Q. {question}</b></h5>
                     {
                         options.map(element => <Options
-                        options={element}></Options> )
+                        options={element}
+                        ans = {correctAnswer}></Options> )
                     }
                 </div>
             </div>
